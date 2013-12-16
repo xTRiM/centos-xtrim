@@ -52,6 +52,11 @@ package "sqlite-devel " do
   not_if "rpm -q sqlite-devel"
 end
 
+package "curl-devel" do
+  action :install
+  not_if "rpm -q npm"
+end
+
 #This is loaded from epel, include recipe[yum::epel]
 package "npm" do
   action :install
