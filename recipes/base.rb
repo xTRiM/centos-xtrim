@@ -54,7 +54,7 @@ end
 
 package "curl-devel" do
   action :install
-  not_if "rpm -q npm"
+  not_if "rpm -q curl-devel"
 end
 
 #This is loaded from epel, include recipe[yum::epel]
