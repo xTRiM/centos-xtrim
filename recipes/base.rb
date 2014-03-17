@@ -62,6 +62,12 @@ package "npm" do
   action :install
   not_if "rpm -q npm"
 end
+
+package "mlocate" do
+  action :install
+  not_if "rpm -q mlocate"
+end 
+
 #
 # chkconfig
 #
