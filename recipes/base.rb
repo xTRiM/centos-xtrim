@@ -68,6 +68,16 @@ package "mlocate" do
   not_if "rpm -q mlocate"
 end 
 
+package "libxml2-devel" do
+  action :install
+  not_if "rpm -q libxml2-devel"
+end 
+
+package "libxslt-devel" do
+  action :install
+  not_if "rpm -q libxslt-devel"
+end 
+
 #
 # chkconfig
 #
