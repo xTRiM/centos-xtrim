@@ -57,12 +57,6 @@ package "curl-devel" do
   not_if "rpm -q curl-devel"
 end
 
-#This is loaded from epel, include recipe[yum::epel]
-package "npm" do
-  action :install
-  not_if "rpm -q npm"
-end
-
 package "mlocate" do
   action :install
   not_if "rpm -q mlocate"
@@ -77,6 +71,31 @@ package "libxslt-devel" do
   action :install
   not_if "rpm -q libxslt-devel"
 end 
+
+package "fontconfig" do
+  action :install
+  not_if "rpm -q fontconfig"
+end 
+ 
+package "freetype" do
+  action :install
+  not_if "rpm -q freetype"
+end 
+
+package "libfreetype.so.6" do
+  action :install
+  not_if "rpm -q libfreetype.so.6"
+end 
+
+package "libfontconfig.so.1" do
+  action :install
+  not_if "rpm -q libfontconfig.so.1"
+end
+
+package "libstdc++.so.6" do
+  action :install
+  not_if "rpm -q libstdc++.so.6"
+end
 
 #
 # chkconfig
